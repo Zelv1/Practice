@@ -1,3 +1,5 @@
+ALTER DATABASE Library
+COLLATE Cyrillic_General_CI_AS ;
 DELETE FROM [Library].[dbo].[Catalog] WHERE ID = 2;
 
 INSERT INTO [Library].[dbo].[Catalog] (Name, Author, Genre, Cost)
@@ -10,5 +12,4 @@ SELECT TOP (1000) [ID]
       ,[Author]
       ,[Genre]
       ,[Cost]
-  FROM [Library].[dbo].[Catalog]
-  ORDER BY Name
+  FROM Library.dbo.Catalog
